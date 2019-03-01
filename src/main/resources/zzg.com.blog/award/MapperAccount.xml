@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="zzg.com.blog.award.MapperAccount">
+
+    <select id="select" resultType="zzg.com.blog.pojo.Account" parameterType="zzg.com.blog.pojo.Account">
+        select * from account as ac
+
+        <where>
+
+            <if test="t.username != null and t.password != null">
+               ac.username=#{t.username} and ac.password=#{t.password}
+            </if>
+
+        </where>
+
+    </select>
+
+    <delete id="delete" parameterType="zzg.com.blog.pojo.Account">
+
+    </delete>
+
+    <update id="update" parameterType="zzg.com.blog.pojo.Account">
+
+    </update>
+
+    <insert id="insert" parameterType="zzg.com.blog.pojo.Account">
+
+    </insert>
+
+    <select id="findOne" resultType="zzg.com.blog.pojo.Account">
+    select * from account where username=#{account.username} and password=#{account.password}
+    </select>
+
+
+</mapper>
