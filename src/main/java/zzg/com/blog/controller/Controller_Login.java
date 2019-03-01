@@ -17,6 +17,7 @@ public class Controller_Login {
 
     @RequestMapping(value = "/",method = {RequestMethod.GET,RequestMethod.POST})
     public String login(){
+        System.out.println("");
         return "/login/login";
     }
 

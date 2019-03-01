@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("zzg.com.blog.award")
 public class BlogApplication {
 
+
     public static void main(String[] args) {
         SpringApplication.run(BlogApplication.class, args);
     }
